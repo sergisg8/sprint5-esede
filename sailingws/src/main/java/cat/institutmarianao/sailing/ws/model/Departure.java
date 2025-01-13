@@ -36,7 +36,6 @@ public class Departure implements Serializable {
 	/* Lombok */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
 	@EqualsAndHashCode.Include
 	protected Long id;
 

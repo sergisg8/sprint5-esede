@@ -54,7 +54,7 @@ public class Trip implements Serializable {
 	private Long id;
 
 	@ManyToOne
-	@JoinColumn(name = "client_id", nullable = false)
+	@JoinColumn(name = "client_username", nullable = false)
 	private Client client;
 
 	@Column(name = "places", nullable = false)

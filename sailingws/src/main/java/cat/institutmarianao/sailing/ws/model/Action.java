@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.DiscriminatorType;
 import jakarta.persistence.Entity;
@@ -59,10 +60,11 @@ public abstract class Action implements Serializable {
 	/* Lombok */
 	@NonNull
 	@Enumerated(EnumType.STRING)
+	@Column(insertable = false, updatable = false)
 	private Type type;
 
 	@ManyToOne
-	@JoinColumn(name = "performer_id")
+	@JoinColumn(name = "performer_username")
 	protected User performer;
 
 	@Temporal(TemporalType.TIMESTAMP)
