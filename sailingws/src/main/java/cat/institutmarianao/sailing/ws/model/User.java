@@ -50,7 +50,7 @@ public abstract class User implements Serializable {
 	@Column(name = "username", nullable = false, length = MAX_USERNAME)
 	protected String username;
 
-	@Column(name = "password", nullable = false, length = MIN_PASSWORD)
+	@Column(name = "password", nullable = false)
 	protected String password;
 
 	@Enumerated(EnumType.STRING)
