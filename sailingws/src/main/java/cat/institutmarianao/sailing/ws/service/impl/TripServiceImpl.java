@@ -3,6 +3,9 @@ package cat.institutmarianao.sailing.ws.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
+
 import cat.institutmarianao.sailing.ws.model.Action;
 import cat.institutmarianao.sailing.ws.model.Trip;
 import cat.institutmarianao.sailing.ws.model.Trip.Status;
@@ -10,6 +13,8 @@ import cat.institutmarianao.sailing.ws.model.TripType.Category;
 import cat.institutmarianao.sailing.ws.service.TripService;
 import jakarta.validation.constraints.NotNull;
 
+@Validated
+@Service
 public class TripServiceImpl implements TripService {
 
 	@Override
