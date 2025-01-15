@@ -1,4 +1,4 @@
-package cat.institutmarianao.sailing.ws.service.impl;
+package cat.institutmarianao.sailing.ws.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
