@@ -29,7 +29,8 @@ public class TripTypeServiceImp implements TripTypeService {
 	public List<TripType> findAll(Category category, Double priceFrom, Double priceTo, Integer maxPlacesFrom,
 			Integer maxPlacesTo, Integer durationFrom, Integer durationTo) {
 
-		return null;
+		return tripTypeRepository.findAllByFilters(category, priceFrom, priceTo, maxPlacesFrom, maxPlacesTo,
+				durationFrom, durationTo);
 	}
 
 	@Override
