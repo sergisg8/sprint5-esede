@@ -1,7 +1,12 @@
 package cat.institutmarianao.sailing.ws.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
-public interface TripRepository extends JpaRepository<T, ID> {
+import cat.institutmarianao.sailing.ws.model.Trip;
 
+public interface TripRepository extends JpaRepository<Trip, Long> {
+	
+	@Query("SELECT t FROM Trip t WHERE "
+			+ ""
 }
