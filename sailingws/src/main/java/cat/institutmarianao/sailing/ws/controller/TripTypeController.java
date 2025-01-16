@@ -52,8 +52,8 @@ public class TripTypeController {
 	@ApiResponse(responseCode = "404", description = "Resource not found")
 	/**/
 	@GetMapping("/get/by/id/{id}")
-	public TripType findById(@PathVariable("id") @NotNull Long id) {
+	public TripType findById(@PathVariable("id") @NotNull Integer id) {
 
-		return tripTypeService.findById(id);
+		return tripTypeService.getById(id);
 	}
 }

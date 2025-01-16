@@ -34,9 +34,10 @@ public class TripTypeServiceImp implements TripTypeService {
 	}
 
 	@Override
-	public TripType findById(@NotNull Long id) {
+	public TripType getById(@NotNull Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return tripTypeRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("TripType with id " + id + "not found"));
 	}
 
 }

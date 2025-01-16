@@ -10,5 +10,5 @@ public interface TripTypeService {
 	List<TripType> findAll(Category category, Double priceFrom, Double priceTo, Integer maxPlacesFrom,
 			Integer maxPlacesTo, Integer durationFrom, Integer durationTo);
 
-	TripType findById(@NotNull Long id);
+	TripType getById(@NotNull Integer id);
 }
